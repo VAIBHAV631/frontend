@@ -179,8 +179,8 @@
   
       const form = e.target;
       const formData = new FormData(form);
-      const BACKEND_URL = process.env.BACKEND_URL
-      const response = await fetch(`${BACKEND_URL}/donations`, {
+      
+      const response = await fetch(`${window.BACKEND_URL}/donations`, {
         method: "POST",
         body: formData,
       });
@@ -202,7 +202,7 @@
       const form = e.target;
       const formData = new FormData(form);
   
-      const response = await fetch(`${BACKEND_URL}/volunteers`, {
+      const response = await fetch(`${window.BACKEND_URL}/volunteers`, {
         method: "POST",
         body: formData,
       });
